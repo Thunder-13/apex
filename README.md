@@ -154,7 +154,9 @@ Latency (p50, from the kit runner): about 80 to 120 ms per scanned text file and
 
 ## Running the tests
 
-Run from the plugin directory, with `HOME` pointed at a temp dir so no test touches your real `~/.claude`:
+Quickest path, from the repository root: `npm test` runs all 12 suites plus the dev eval with a temporary `HOME` (no install needed; there are no npm dependencies). `npm run test:holdout` runs the blind held-out eval, `npm run kit` runs the file kit, `npm run doctor` checks your environment.
+
+To run suites one by one, work from the plugin directory, with `HOME` pointed at a temp dir so no test touches your real `~/.claude`:
 
 ```bash
 cd apex

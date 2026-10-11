@@ -1,0 +1,31 @@
+{
+  "name": "apex",
+  "version": "3.0.0",
+  "description": "APEX (Ask. Perfect. EXecute.): Claude Code plugin with the APEX Firewall, a prompt injection firewall for AI agents (9 attack types, 11 input sources, Haiku/Sonnet/Opus cascade).",
+  "author": "Thunder-13 <saravananofficial13@gmail.com>",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "export HOME=\"$(mktemp -d)\" APEX_HOME=\"$PWD/apex\"; for t in apex/tests/*.test.js apex/tests/pif/*.test.js; do echo \"== $t\"; node \"$t\" > /dev/null || { echo \"FAILED: $t\"; exit 1; }; done; node apex/tests/pif/eval.js | tail -4",
+    "test:firewall": "node apex/tests/pif/attacks.test.js && node apex/tests/pif/eval.js",
+    "test:holdout": "node apex/tests/pif/eval.js --set holdout",
+    "kit": "cd apex/tests/pif/kit && node run-kit.js",
+    "doctor": "node apex/router/apex-doctor.js",
+    "install-apex": "bash install.sh",
+    "install-apex:dry-run": "bash install.sh --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thunder-13/apex.git"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "prompt-injection",
+    "ai-security",
+    "llm-firewall"
+  ]
+}
