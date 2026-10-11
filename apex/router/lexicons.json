@@ -1,0 +1,2064 @@
+{
+  "_schema": "1.0",
+  "_note": "Starter lexicon. Trigger phrases match on word boundaries (lowercase). Anti phrases suppress the label. Format per entry: {triggers:[...], anti:[...], basis:'...'}",
+  "task_types": {
+    "code_build": {
+      "triggers": [
+        "implement",
+        "write a function",
+        "build a module",
+        "create a class",
+        "add feature",
+        "develop",
+        "code that",
+        "write code",
+        "new component",
+        "generate a script",
+        "make a script",
+        "add endpoint",
+        "add api",
+        "write unit test",
+        "scaffold",
+        "bootstrap",
+        "initialize a",
+        "create a service",
+        "create an api",
+        "implement the",
+        "write the"
+      ],
+      "anti": [
+        "explain",
+        "review",
+        "fix the bug",
+        "debug",
+        "refactor",
+        "optimize existing"
+      ],
+      "basis": "imperative + absence of existing file context"
+    },
+    "code_fix": {
+      "triggers": [
+        "fix",
+        "bug",
+        "error",
+        "exception",
+        "not working",
+        "broken",
+        "failing",
+        "crash",
+        "traceback",
+        "stack trace",
+        "undefined",
+        "null pointer",
+        "segfault",
+        "type error",
+        "syntax error",
+        "runtime error",
+        "why does this",
+        "debug",
+        "diagnose",
+        "patch",
+        "correct the",
+        "wrong output"
+      ],
+      "anti": [
+        "new feature",
+        "implement",
+        "create from scratch"
+      ],
+      "basis": "error signals + existing code present"
+    },
+    "code_review": {
+      "triggers": [
+        "review",
+        "audit",
+        "code quality",
+        "security review",
+        "check this code",
+        "what do you think of",
+        "any issues",
+        "look over",
+        "assess the code",
+        "review this pr",
+        "review these changes",
+        "is this secure",
+        "vulnerability",
+        "lint",
+        "style check"
+      ],
+      "anti": [
+        "fix the bug",
+        "implement",
+        "refactor",
+        "explain how"
+      ],
+      "basis": "review + audit vocabulary"
+    },
+    "refactor": {
+      "triggers": [
+        "refactor",
+        "restructure",
+        "reorganize",
+        "clean up",
+        "simplify",
+        "extract function",
+        "extract method",
+        "rename",
+        "move to",
+        "decouple",
+        "modularize",
+        "reduce duplication",
+        "dry principle",
+        "improve readability",
+        "technical debt"
+      ],
+      "anti": [
+        "new feature",
+        "fix bug",
+        "explain"
+      ],
+      "basis": "structural improvement vocabulary"
+    },
+    "ops_shell": {
+      "triggers": [
+        "shell",
+        "bash script",
+        "git",
+        "deploy",
+        "pipeline",
+        "ci/cd",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "infra",
+        "config",
+        "environment variable",
+        "cron",
+        "systemd",
+        "nginx",
+        "run the command",
+        "cli",
+        "chmod",
+        "ssh",
+        "scp",
+        "rsync",
+        "make",
+        "build system",
+        "npm run",
+        "yarn",
+        "pip install"
+      ],
+      "anti": [
+        "explain",
+        "what is",
+        "write a story"
+      ],
+      "basis": "ops/shell/infra vocabulary"
+    },
+    "data_extract": {
+      "triggers": [
+        "extract",
+        "parse",
+        "pull out",
+        "find all",
+        "regex",
+        "scrape",
+        "retrieve",
+        "get all",
+        "list all",
+        "extract from",
+        "read the",
+        "json output",
+        "csv output",
+        "structured output",
+        "into json",
+        "transform",
+        "invoice",
+        "table from",
+        "field",
+        "column",
+        "row",
+        "record",
+        "entry",
+        "match pattern"
+      ],
+      "anti": [
+        "explain",
+        "write prose",
+        "brainstorm"
+      ],
+      "basis": "extraction + parsing vocabulary"
+    },
+    "classify_label": {
+      "triggers": [
+        "classify",
+        "categorize",
+        "label",
+        "tag",
+        "route",
+        "sort into",
+        "assign category",
+        "identify type",
+        "determine if",
+        "is this a",
+        "sentiment",
+        "intent detection",
+        "topic modeling",
+        "cluster",
+        "group by"
+      ],
+      "anti": [
+        "explain",
+        "write code from scratch"
+      ],
+      "basis": "classification vocabulary"
+    },
+    "data_analysis": {
+      "triggers": [
+        "analyze",
+        "analyse",
+        "statistics",
+        "trend",
+        "correlation",
+        "distribution",
+        "average",
+        "median",
+        "chart",
+        "graph",
+        "plot",
+        "regression",
+        "forecast",
+        "anomaly",
+        "outlier",
+        "aggregate",
+        "pivot",
+        "data exploration",
+        "eda",
+        "dataset",
+        "calculate",
+        "compute"
+      ],
+      "anti": [
+        "write prose",
+        "creative",
+        "brainstorm"
+      ],
+      "basis": "analytical/quantitative vocabulary"
+    },
+    "research": {
+      "triggers": [
+        "research",
+        "find information",
+        "look up",
+        "compare options",
+        "what are the best",
+        "latest",
+        "current state of",
+        "survey",
+        "literature review",
+        "sources",
+        "references",
+        "pros and cons",
+        "trade-offs",
+        "alternatives",
+        "which is better",
+        "overview of",
+        "summary of"
+      ],
+      "anti": [
+        "write code",
+        "fix bug",
+        "creative story"
+      ],
+      "basis": "research + discovery vocabulary"
+    },
+    "explain_teach": {
+      "triggers": [
+        "explain",
+        "how does",
+        "what is",
+        "teach me",
+        "walk me through",
+        "describe",
+        "help me understand",
+        "clarify",
+        "what does",
+        "why does",
+        "example of",
+        "show me how",
+        "tutorial",
+        "introduction to",
+        "overview of",
+        "concept",
+        "what are"
+      ],
+      "anti": [
+        "implement",
+        "fix the bug",
+        "classify"
+      ],
+      "basis": "teaching/explanation vocabulary"
+    },
+    "write_prose": {
+      "triggers": [
+        "write a blog",
+        "write an email",
+        "draft a",
+        "compose",
+        "write a report",
+        "write documentation",
+        "readme",
+        "changelog",
+        "release notes",
+        "announcement",
+        "write a letter",
+        "write a post",
+        "copy",
+        "marketing",
+        "press release",
+        "newsletter",
+        "proposal"
+      ],
+      "anti": [
+        "write code",
+        "fix bug",
+        "classify",
+        "extract"
+      ],
+      "basis": "prose/document creation vocabulary"
+    },
+    "creative_ideation": {
+      "triggers": [
+        "brainstorm",
+        "ideas for",
+        "name ideas",
+        "creative",
+        "come up with",
+        "generate ideas",
+        "suggest",
+        "invent",
+        "imagine",
+        "creative writing",
+        "story",
+        "poem",
+        "fiction",
+        "screenplay",
+        "concept",
+        "ideate",
+        "what if",
+        "think of",
+        "design names"
+      ],
+      "anti": [
+        "implement",
+        "extract",
+        "classify",
+        "fix"
+      ],
+      "basis": "ideation/creative vocabulary"
+    },
+    "plan_design": {
+      "triggers": [
+        "architecture",
+        "design system",
+        "plan",
+        "strategy",
+        "roadmap",
+        "system design",
+        "schema",
+        "database design",
+        "api design",
+        "high level design",
+        "technical spec",
+        "proposal",
+        "blueprint",
+        "diagram",
+        "flowchart",
+        "sequence diagram",
+        "design pattern"
+      ],
+      "anti": [
+        "fix bug",
+        "write prose",
+        "quick answer"
+      ],
+      "basis": "planning/architecture vocabulary"
+    },
+    "prompt_agent_design": {
+      "triggers": [
+        "write a prompt",
+        "system prompt",
+        "prompt template",
+        "agent",
+        "skill",
+        "write a skill",
+        "design an agent",
+        "ai assistant",
+        "chatbot",
+        "few-shot prompt",
+        "prompt engineering",
+        "ape",
+        "improve this prompt",
+        "optimize this prompt",
+        "rewrite this prompt"
+      ],
+      "anti": [
+        "fix code bug",
+        "write prose",
+        "data analysis"
+      ],
+      "basis": "prompt/agent design vocabulary"
+    },
+    "decision_advice": {
+      "triggers": [
+        "should i",
+        "which should",
+        "recommend",
+        "advise",
+        "what would you",
+        "help me decide",
+        "choice between",
+        "option a or",
+        "trade off",
+        "is it worth",
+        "would you recommend",
+        "guidance on",
+        "what's your take",
+        "opinion on"
+      ],
+      "anti": [
+        "implement",
+        "extract data",
+        "write code"
+      ],
+      "basis": "decision/advice vocabulary"
+    },
+    "quick_fact": {
+      "triggers": [
+        "what is the",
+        "how many",
+        "when was",
+        "who is",
+        "where is",
+        "define",
+        "quick question",
+        "one line",
+        "just tell me",
+        "tldr",
+        "in one sentence",
+        "capital of",
+        "definition of"
+      ],
+      "anti": [
+        "implement",
+        "build",
+        "analyze",
+        "comprehensive",
+        "detailed",
+        "in depth"
+      ],
+      "basis": "quick lookup vocabulary"
+    }
+  },
+  "pools": {
+    "creative": {
+      "triggers": [
+        "story",
+        "poem",
+        "creative",
+        "tone",
+        "voice",
+        "style",
+        "brand",
+        "narrative",
+        "persona",
+        "character",
+        "brainstorm",
+        "invent",
+        "imagine",
+        "copy",
+        "marketing",
+        "blog post",
+        "email campaign",
+        "name idea",
+        "tagline",
+        "slogan",
+        "draft",
+        "rejection",
+        "warm tone",
+        "audience is"
+      ],
+      "anti": [
+        "parse",
+        "extract",
+        "json output",
+        "strict format",
+        "exact",
+        "regex",
+        "classify",
+        "schema"
+      ],
+      "basis": "voice/register signals"
+    },
+    "reliability": {
+      "triggers": [
+        "json",
+        "xml",
+        "csv",
+        "schema",
+        "parse",
+        "extract",
+        "regex",
+        "exact",
+        "structured",
+        "output format",
+        "field",
+        "type definition",
+        "interface",
+        "api",
+        "endpoint",
+        "pipeline",
+        "assert",
+        "test",
+        "validate",
+        "database",
+        "query",
+        "sql"
+      ],
+      "anti": [
+        "story",
+        "creative",
+        "opinion",
+        "brainstorm",
+        "what do you think",
+        "what is",
+        "what does",
+        "what are",
+        "is it true"
+      ],
+      "basis": "format-contract signals"
+    },
+    "reasoning": {
+      "triggers": [
+        "analyze",
+        "compare",
+        "pros and cons",
+        "trade-off",
+        "best approach",
+        "should i",
+        "recommend",
+        "why",
+        "how does",
+        "explain the reasoning",
+        "evaluate",
+        "assessment",
+        "plan",
+        "strategy",
+        "research",
+        "investigation",
+        "diagnose",
+        "what is",
+        "what does",
+        "explain",
+        "postmortem"
+      ],
+      "anti": [
+        "json output",
+        "parse",
+        "creative story",
+        "poem"
+      ],
+      "basis": "analytical + decision signals"
+    }
+  },
+  "tiers": {
+    "micro": {
+      "triggers": [
+        "quick",
+        "one line",
+        "just",
+        "briefly",
+        "tldr",
+        "short answer",
+        "simple question",
+        "yes or no",
+        "what is",
+        "define",
+        "when was",
+        "who is"
+      ],
+      "anti": [
+        "comprehensive",
+        "detailed",
+        "multi-file",
+        "all files",
+        "entire codebase",
+        "architecture",
+        "design",
+        "plan",
+        "step by step",
+        "thoroughly"
+      ],
+      "basis": "length/complexity signals"
+    },
+    "standard": {
+      "triggers": [
+        "implement",
+        "write",
+        "explain",
+        "analyze",
+        "create",
+        "build",
+        "help me",
+        "review",
+        "fix",
+        "refactor"
+      ],
+      "anti": [
+        "entire codebase",
+        "all files",
+        "multi-session",
+        "delete",
+        "deploy to prod",
+        "migrate",
+        "one line",
+        "just tell me"
+      ],
+      "basis": "default tier; minimal triggers needed"
+    },
+    "deep": {
+      "triggers": [
+        "entire codebase",
+        "all files",
+        "multi-step",
+        "architecture",
+        "migration",
+        "deploy to production",
+        "refactor everything",
+        "comprehensive",
+        "end to end",
+        "full system",
+        "across multiple",
+        "delete",
+        "force push",
+        "reset hard",
+        "send to all",
+        "publish to"
+      ],
+      "anti": [
+        "one line",
+        "quick",
+        "just tell me",
+        "simple"
+      ],
+      "basis": "blast-radius signals"
+    }
+  },
+  "flags": {
+    "persona_fit": {
+      "triggers": [
+        "tone",
+        "voice",
+        "style",
+        "formal",
+        "casual",
+        "friendly",
+        "professional",
+        "audience",
+        "brand",
+        "persona",
+        "register",
+        "humor",
+        "sarcastic",
+        "empathetic",
+        "technical audience",
+        "beginner",
+        "expert"
+      ],
+      "anti": [
+        "json",
+        "extract",
+        "parse",
+        "code output"
+      ],
+      "basis": "voice/register importance signals"
+    },
+    "critique_loop": {
+      "triggers": [
+        "review and improve",
+        "self-critique",
+        "draft and revise",
+        "iterate",
+        "quality matters",
+        "best possible",
+        "high quality",
+        "polish",
+        "refine",
+        "review before",
+        "evaluate and improve"
+      ],
+      "anti": [
+        "quick",
+        "one line",
+        "fast",
+        "just tell me"
+      ],
+      "basis": "quality-over-speed signals"
+    },
+    "iteration_readiness": {
+      "triggers": [
+        "template",
+        "reusable",
+        "parameterize",
+        "variable",
+        "fill in",
+        "placeholder",
+        "this will be used",
+        "prompt template",
+        "reuse",
+        "many times"
+      ],
+      "anti": [
+        "one-off",
+        "just this once"
+      ],
+      "basis": "reuse signals"
+    },
+    "output_parseability": {
+      "triggers": [
+        "json",
+        "xml",
+        "csv",
+        "yaml",
+        "schema",
+        "structured",
+        "machine-readable",
+        "parse",
+        "downstream",
+        "api response",
+        "field",
+        "array",
+        "object",
+        "output format",
+        "into json",
+        "as json",
+        "return json"
+      ],
+      "anti": [
+        "prose",
+        "conversational",
+        "explain",
+        "story"
+      ],
+      "basis": "parser-consumption signals"
+    },
+    "injection_defense": {
+      "triggers": [
+        "user input",
+        "untrusted",
+        "paste from",
+        "from the web",
+        "from the file",
+        "user-provided",
+        "external data",
+        "uploaded",
+        "from a form",
+        "attacker",
+        "injection",
+        "malicious",
+        "security"
+      ],
+      "anti": [
+        "internal only",
+        "my own data",
+        "hardcoded"
+      ],
+      "basis": "untrusted-input signals"
+    },
+    "destructive": {
+      "triggers": [
+        "delete",
+        "drop table",
+        "rm -rf",
+        "force push",
+        "reset --hard",
+        "deploy to prod",
+        "send to",
+        "publish",
+        "migrate",
+        "overwrite",
+        "truncate",
+        "irreversible",
+        "permanent",
+        "nuke",
+        "wipe",
+        "purge",
+        "blow away",
+        "clean up branches",
+        "kill all",
+        "restore from",
+        "data deletion",
+        "erase",
+        "drop database",
+        "rm -r",
+        "security incident",
+        "prod is down",
+        "hard reset",
+        "run in prod",
+        "in prod",
+        "customer pii",
+        "data breach",
+        "auto deploy",
+        "reset --soft"
+      ],
+      "anti": [
+        "dry run",
+        "preview",
+        "test environment",
+        "staging"
+      ],
+      "basis": "blast-radius signals"
+    },
+    "ambiguous": {
+      "triggers": [
+        "or maybe",
+        "not sure if",
+        "could be",
+        "either",
+        "unclear",
+        "vague",
+        "what do you mean by",
+        "depends on",
+        "it could",
+        "ambiguous",
+        "two ways",
+        "make it better",
+        "just make it work",
+        "improve this"
+      ],
+      "anti": [
+        "exactly",
+        "specifically",
+        "precise",
+        "clear requirement"
+      ],
+      "basis": "ambiguity signals"
+    },
+    "needs_fresh_facts": {
+      "triggers": [
+        "latest",
+        "current",
+        "today",
+        "recent",
+        "2024",
+        "2025",
+        "2026",
+        "news",
+        "stock price",
+        "real-time",
+        "live data",
+        "up to date",
+        "current version",
+        "this week",
+        "this month"
+      ],
+      "anti": [
+        "historical",
+        "as of",
+        "back in",
+        "classic"
+      ],
+      "basis": "freshness signals"
+    }
+  },
+  "techniques": {
+    "T1": {
+      "triggers": [
+        "act as",
+        "you are a",
+        "role of",
+        "persona",
+        "pretend you are",
+        "as an expert",
+        "as a",
+        "in the role of",
+        "wear the hat of",
+        "voice of",
+        "tone of",
+        "sound like",
+        "explain like you are",
+        "expert in",
+        "specialist",
+        "character"
+      ],
+      "anti": [
+        "json output",
+        "extract",
+        "parse",
+        "no persona needed",
+        "parse json",
+        "classify",
+        "label this",
+        "structured output"
+      ],
+      "basis": "source"
+    },
+    "T2": {
+      "triggers": [
+        "for example",
+        "example input",
+        "example output",
+        "few-shot",
+        "like this",
+        "sample",
+        "here are examples",
+        "show me with",
+        "demonstration",
+        "input/output pair",
+        "example",
+        "here is a sample",
+        "follow this pattern",
+        "similar to",
+        "format like",
+        "for instance",
+        "show me",
+        "modeled after",
+        "in the style of"
+      ],
+      "anti": [
+        "no examples",
+        "do not use examples",
+        "no examples needed",
+        "general answer",
+        "just tell me",
+        "one-off"
+      ],
+      "basis": "source"
+    },
+    "T3": {
+      "triggers": [
+        "step by step",
+        "think through",
+        "chain of thought",
+        "reasoning steps",
+        "show your work",
+        "walk through",
+        "before answering",
+        "think carefully",
+        "explain your reasoning",
+        "how did you get",
+        "walk me through",
+        "prove",
+        "justify each",
+        "why",
+        "logic behind"
+      ],
+      "anti": [
+        "just give",
+        "no explanation",
+        "direct answer only",
+        "one word answer",
+        "just the label",
+        "quick answer",
+        "single value",
+        "yes or no"
+      ],
+      "basis": "source"
+    },
+    "T4": {
+      "triggers": [
+        "extended thinking",
+        "thinking budget",
+        "deep reasoning",
+        "take your time",
+        "think deeply",
+        "thorough analysis",
+        "scratch space",
+        "think before",
+        "architecture decision",
+        "retry policy",
+        "complex tradeoff",
+        "deeply analyze",
+        "hard problem",
+        "design a system",
+        "multi-factor",
+        "justify each choice",
+        "long reasoning"
+      ],
+      "anti": [
+        "quick",
+        "one line",
+        "fast answer",
+        "sentiment",
+        "simple label",
+        "short extract",
+        "quick classification",
+        "cheap task"
+      ],
+      "basis": "source"
+    },
+    "T5": {
+      "triggers": [
+        "break down",
+        "sub-steps",
+        "decompose",
+        "subtasks",
+        "step 1",
+        "step 2",
+        "phases",
+        "break into",
+        "split into",
+        "first do",
+        "then do",
+        "finally",
+        "break into steps",
+        "phase by phase",
+        "first then",
+        "sequential",
+        "plan then execute",
+        "subgoals",
+        "compound task",
+        "multi-part",
+        "stage",
+        "pipeline"
+      ],
+      "anti": [
+        "single step",
+        "atomic",
+        "simple one-liner",
+        "one thing only",
+        "simple question",
+        "quick lookup"
+      ],
+      "basis": "source"
+    },
+    "T6": {
+      "triggers": [
+        "must not",
+        "do not",
+        "avoid",
+        "constraint",
+        "limit to",
+        "no more than",
+        "only include",
+        "exclude",
+        "must be",
+        "requirement",
+        "rule",
+        "restriction",
+        "boundary",
+        "do not mention",
+        "forbidden",
+        "maximum words",
+        "only use",
+        "restrict to",
+        "haiku",
+        "tweet length",
+        "bullet points only"
+      ],
+      "anti": [
+        "open-ended",
+        "anything goes",
+        "no constraints",
+        "open ended",
+        "brainstorm freely",
+        "creative freedom",
+        "surprise me"
+      ],
+      "basis": "source"
+    },
+    "T7": {
+      "triggers": [
+        "json",
+        "xml",
+        "csv",
+        "yaml",
+        "table",
+        "schema",
+        "structured output",
+        "as json",
+        "return json",
+        "output json",
+        "formatted as",
+        "field",
+        "key",
+        "value",
+        "object",
+        "array",
+        "data structure",
+        "structured",
+        "extract into",
+        "parse",
+        "fields",
+        "key value",
+        "return only json",
+        "machine readable"
+      ],
+      "anti": [
+        "prose",
+        "conversational",
+        "free-form",
+        "no format needed",
+        "human reads this",
+        "story",
+        "email",
+        "blog post",
+        "narrative"
+      ],
+      "basis": "source"
+    },
+    "T8": {
+      "triggers": [
+        "delimit",
+        "fence",
+        "xml tags",
+        "code block",
+        "separate",
+        "isolate",
+        "mark the",
+        "between tags",
+        "within tags",
+        "use tags",
+        "delimiter",
+        "boundary",
+        "document",
+        "paste text",
+        "here is the email",
+        "context below",
+        "untrusted input",
+        "user supplied",
+        "separate instruction from data",
+        "tag the content"
+      ],
+      "anti": [
+        "no formatting",
+        "plain text only",
+        "no external data",
+        "pure instruction",
+        "self contained prompt"
+      ],
+      "basis": "source"
+    },
+    "T9": {
+      "triggers": [
+        "start with",
+        "begin with",
+        "prefill",
+        "the answer is",
+        "result:",
+        "output:",
+        "continue from",
+        "seed",
+        "start the response",
+        "start with open brace",
+        "force json start",
+        "no preamble",
+        "no chatty intro",
+        "seed the reply",
+        "assistant starts with"
+      ],
+      "anti": [
+        "let the model decide",
+        "open format",
+        "conversational",
+        "freeform reply",
+        "let model choose opening",
+        "narrative"
+      ],
+      "basis": "source"
+    },
+    "T10": {
+      "triggers": [
+        "stop at",
+        "stop when",
+        "end marker",
+        "stop sequence",
+        "cut off",
+        "truncate at",
+        "end token",
+        "stop after",
+        "cut at delimiter",
+        "only the code",
+        "extract just one field",
+        "halt at",
+        "end generation at",
+        "code fence only"
+      ],
+      "anti": [
+        "complete response",
+        "full answer",
+        "full response",
+        "complete answer",
+        "open ended output",
+        "let it finish"
+      ],
+      "basis": "source"
+    },
+    "T11": {
+      "triggers": [
+        "temperature",
+        "top-p",
+        "sampling",
+        "deterministic",
+        "creative output",
+        "random",
+        "varied output",
+        "consistent output",
+        "temp 0",
+        "low temperature",
+        "high temperature",
+        "creative",
+        "brainstorm",
+        "vary outputs",
+        "stable results",
+        "legal document",
+        "classification"
+      ],
+      "anti": [
+        "default settings",
+        "default settings fine",
+        "no tuning needed"
+      ],
+      "basis": "source"
+    },
+    "T12": {
+      "triggers": [
+        "based on",
+        "according to",
+        "from the document",
+        "source",
+        "cite",
+        "grounding",
+        "from the provided",
+        "reference",
+        "evidence",
+        "only use",
+        "from the context",
+        "from the text",
+        "from the data",
+        "based only on",
+        "cite the source",
+        "quote the sentence",
+        "do not use outside knowledge",
+        "provided context only",
+        "rag",
+        "retrieval",
+        "reference text"
+      ],
+      "anti": [
+        "from memory",
+        "general knowledge",
+        "no sources",
+        "use your knowledge",
+        "general answer",
+        "creative fiction",
+        "brainstorm"
+      ],
+      "basis": "source"
+    },
+    "T13": {
+      "triggers": [
+        "critique",
+        "self-review",
+        "review your answer",
+        "check your work",
+        "draft and critique",
+        "evaluate your",
+        "improve your",
+        "self-assess",
+        "revise",
+        "what's wrong with",
+        "find flaws",
+        "critique this",
+        "review your own answer",
+        "what did you miss",
+        "rate your output",
+        "improve this draft",
+        "self assess",
+        "be brutally honest",
+        "revise based on"
+      ],
+      "anti": [
+        "quick answer",
+        "no review needed",
+        "simple extraction",
+        "classification",
+        "one shot answer needed",
+        "no revision needed"
+      ],
+      "basis": "source"
+    },
+    "T14": {
+      "triggers": [
+        "iterate",
+        "refine",
+        "one variable at a time",
+        "baseline",
+        "compare versions",
+        "a/b",
+        "incremental",
+        "progressive",
+        "make it more",
+        "too formal",
+        "shorter",
+        "angrier",
+        "tweak",
+        "adjust tone",
+        "try again but",
+        "previous draft"
+      ],
+      "anti": [
+        "one-shot",
+        "single attempt",
+        "one shot only",
+        "no follow up",
+        "production pipeline",
+        "batch processing"
+      ],
+      "basis": "source"
+    },
+    "T15": {
+      "triggers": [
+        "test cases",
+        "golden dataset",
+        "eval",
+        "benchmark",
+        "evaluate prompt",
+        "score the",
+        "pass/fail",
+        "expected output",
+        "ground truth",
+        "score the prompt",
+        "compare versions",
+        "accuracy",
+        "labeled dataset",
+        "regression",
+        "before shipping"
+      ],
+      "anti": [
+        "no testing needed",
+        "one-off task",
+        "no ground truth",
+        "creative with no right answer",
+        "quick experiment"
+      ],
+      "basis": "source"
+    },
+    "T16": {
+      "triggers": [
+        "i don't know",
+        "say when unsure",
+        "admit uncertainty",
+        "confidence label",
+        "hallucination",
+        "uncertain",
+        "do not guess",
+        "only if you know",
+        "if you are not sure",
+        "do not invent",
+        "say i don't know if",
+        "confidence",
+        "factual",
+        "high stakes",
+        "medical",
+        "legal",
+        "compliance"
+      ],
+      "anti": [
+        "always answer",
+        "no caveats",
+        "creative fiction",
+        "brainstorm",
+        "invented scenarios fine",
+        "fantasy"
+      ],
+      "basis": "source"
+    },
+    "T17": {
+      "triggers": [
+        "user input",
+        "untrusted",
+        "injection",
+        "treat as data",
+        "not as instruction",
+        "security",
+        "escape",
+        "sanitize",
+        "malicious input",
+        "from user",
+        "untrusted input",
+        "user file",
+        "email body",
+        "web page content",
+        "external text",
+        "summarize this email",
+        "rag pipeline",
+        "user supplied document"
+      ],
+      "anti": [
+        "internal data",
+        "trusted source",
+        "no external input",
+        "fixed prompt only",
+        "no user data"
+      ],
+      "basis": "source"
+    },
+    "T18": {
+      "triggers": [
+        "detect refusal",
+        "evasive",
+        "partial answer",
+        "silent failure",
+        "check if answered",
+        "verify response",
+        "incomplete",
+        "handle apology",
+        "json parser downstream",
+        "programmatic output",
+        "if model refuses",
+        "safe fallback",
+        "try except",
+        "non-json reply"
+      ],
+      "anti": [
+        "full answer expected",
+        "human reads result",
+        "no parsing",
+        "freeform ok"
+      ],
+      "basis": "source"
+    },
+    "T19": {
+      "triggers": [
+        "system prompt",
+        "durable rules",
+        "in the system prompt",
+        "persist across",
+        "user turn",
+        "assistant turn",
+        "placement",
+        "persistent rules",
+        "identity",
+        "multi-turn",
+        "product feature",
+        "stable instructions",
+        "hold across turns",
+        "api system field"
+      ],
+      "anti": [
+        "single turn",
+        "no system prompt",
+        "one-off script",
+        "no state needed"
+      ],
+      "basis": "source"
+    },
+    "T20": {
+      "triggers": [
+        "pipeline",
+        "chain",
+        "feed into",
+        "output of step",
+        "multi-step pipeline",
+        "chain prompts",
+        "sequential",
+        "pass result to",
+        "feed output to next",
+        "chain models",
+        "text to image",
+        "first generate then",
+        "intermediate result",
+        "multi-model",
+        "output chaining"
+      ],
+      "anti": [
+        "single prompt",
+        "one step",
+        "single model",
+        "one step task",
+        "no downstream consumer"
+      ],
+      "basis": "source"
+    },
+    "T21": {
+      "triggers": [
+        "create framework",
+        "character",
+        "request",
+        "examples",
+        "adjustments",
+        "type",
+        "extras",
+        "structured approach",
+        "from scratch prompt",
+        "full prompt",
+        "all elements",
+        "context role examples action tone",
+        "create checklist",
+        "structured prompt"
+      ],
+      "anti": [
+        "single element fix",
+        "quick tweak",
+        "already have a good prompt"
+      ],
+      "basis": "source"
+    },
+    "T22": {
+      "triggers": [
+        "long document",
+        "document first",
+        "context first",
+        "question at end",
+        "instruction placement",
+        "put the question last",
+        "long document attached",
+        "paste document first",
+        "instruction position",
+        "buried question",
+        "document then question",
+        "repeat instruction at end",
+        "context before question"
+      ],
+      "anti": [
+        "short prompt",
+        "simple question",
+        "no document",
+        "instruction only"
+      ],
+      "basis": "source"
+    },
+    "T23": {
+      "triggers": [
+        "token budget",
+        "context window",
+        "compress",
+        "truncate context",
+        "fit in context",
+        "token limit",
+        "within budget",
+        "context size",
+        "token count",
+        "summarize history",
+        "long chat",
+        "track tokens",
+        "cost estimate",
+        "latency predict",
+        "40 page document",
+        "context limit"
+      ],
+      "anti": [
+        "short prompt",
+        "small context",
+        "single turn",
+        "tiny input"
+      ],
+      "basis": "source"
+    },
+    "T24": {
+      "triggers": [
+        "self-consistency",
+        "sample multiple",
+        "majority vote",
+        "multiple paths",
+        "several attempts",
+        "best of",
+        "most common answer",
+        "multiple attempts",
+        "sample several",
+        "try it different ways",
+        "consistency across runs",
+        "aggregate answers",
+        "vote"
+      ],
+      "anti": [
+        "single attempt",
+        "deterministic",
+        "single pass",
+        "one answer only",
+        "deterministic required",
+        "latency sensitive"
+      ],
+      "basis": "judgment"
+    },
+    "T25": {
+      "triggers": [
+        "tree of thoughts",
+        "branch",
+        "explore alternatives",
+        "prune",
+        "evaluate branches",
+        "best path",
+        "thought tree",
+        "branch reasoning",
+        "evaluate paths",
+        "prune options",
+        "compare approaches",
+        "decision tree",
+        "what if",
+        "multiple strategies"
+      ],
+      "anti": [
+        "linear",
+        "single path",
+        "simple lookup",
+        "single answer",
+        "time critical",
+        "cheap task"
+      ],
+      "basis": "judgment"
+    },
+    "T26": {
+      "triggers": [
+        "react",
+        "reason and act",
+        "tool use",
+        "observe",
+        "tool loop",
+        "agentic",
+        "tool call",
+        "use tool",
+        "search and",
+        "act and observe",
+        "use a tool",
+        "search the web",
+        "call an api",
+        "run code",
+        "observe result",
+        "agent loop",
+        "act then observe",
+        "function call"
+      ],
+      "anti": [
+        "no tools",
+        "static answer",
+        "no tools available",
+        "pure text generation",
+        "offline task",
+        "no external calls"
+      ],
+      "basis": "source"
+    },
+    "T27": {
+      "triggers": [
+        "plan first",
+        "write the plan",
+        "plan and execute",
+        "plan before",
+        "outline then",
+        "first plan",
+        "create a plan",
+        "write the plan first",
+        "outline before executing",
+        "draft the steps then do them",
+        "plan as artifact",
+        "create a plan then follow it",
+        "task decomposition artifact"
+      ],
+      "anti": [
+        "just do it",
+        "no planning needed",
+        "simple task",
+        "one step",
+        "quick answer"
+      ],
+      "basis": "source"
+    },
+    "T28": {
+      "triggers": [
+        "step back",
+        "governing principle",
+        "abstraction first",
+        "general rule",
+        "principle behind",
+        "what is the broader",
+        "what principle applies",
+        "general rule first",
+        "abstraction before detail",
+        "governing concept",
+        "step back and think about",
+        "underlying framework"
+      ],
+      "anti": [
+        "specific detail",
+        "direct answer",
+        "specific detail only",
+        "no abstraction needed",
+        "fact lookup",
+        "simple classification"
+      ],
+      "basis": "judgment"
+    },
+    "T29": {
+      "triggers": [
+        "least to most",
+        "easier first",
+        "subproblems",
+        "simpler first",
+        "build up to",
+        "progressive complexity",
+        "start with simpler version",
+        "easier subproblem first",
+        "build up to harder",
+        "solve parts before whole",
+        "warm up with"
+      ],
+      "anti": [
+        "hardest first",
+        "all at once",
+        "uniform difficulty",
+        "single question",
+        "no subproblems",
+        "flat task"
+      ],
+      "basis": "judgment"
+    },
+    "T30": {
+      "triggers": [
+        "clarify",
+        "ask me",
+        "what do you mean",
+        "before proceeding",
+        "one question",
+        "if unclear ask",
+        "blocking question",
+        "unclear requirement",
+        "ambiguous",
+        "before proceeding ask",
+        "need clarification",
+        "what do you mean by",
+        "single blocking question",
+        "clarify before"
+      ],
+      "anti": [
+        "assume",
+        "just proceed",
+        "no questions",
+        "clear spec",
+        "complete requirements",
+        "no ambiguity",
+        "well defined task"
+      ],
+      "basis": "judgment"
+    },
+    "T31": {
+      "triggers": [
+        "rubric",
+        "llm as judge",
+        "score on",
+        "criteria",
+        "anchor",
+        "judging criteria",
+        "evaluation rubric",
+        "score each",
+        "rate on a scale",
+        "score this output",
+        "rate against criteria",
+        "llm judge",
+        "model graded",
+        "evaluate with anchors",
+        "0 to 10 score",
+        "quality assessment",
+        "grade the answer"
+      ],
+      "anti": [
+        "no scoring",
+        "informal review",
+        "exact match possible",
+        "binary correct wrong",
+        "simple label",
+        "no quality criteria"
+      ],
+      "basis": "source"
+    },
+    "T32": {
+      "triggers": [
+        "external memory",
+        "scratchpad",
+        "context engineering",
+        "state management",
+        "progressive disclosure",
+        "file context",
+        "memory",
+        "state across turns",
+        "external files",
+        "long context management",
+        "summarize and store",
+        "knowledge base"
+      ],
+      "anti": [
+        "simple prompt",
+        "no state",
+        "single turn",
+        "no state needed",
+        "stateless call",
+        "short context"
+      ],
+      "basis": "judgment"
+    },
+    "T33": {
+      "triggers": [
+        "o1",
+        "o3",
+        "reasoning model",
+        "claude 3 extended",
+        "goal and constraints",
+        "no micromanaged steps",
+        "let the model reason",
+        "claude extended thinking",
+        "give it the goal",
+        "success criteria",
+        "do not micromanage steps",
+        "let model reason freely"
+      ],
+      "anti": [
+        "step by step instructions",
+        "chain of thought prompted",
+        "instruct model step by step",
+        "legacy model",
+        "non-reasoning model",
+        "explicit step control"
+      ],
+      "basis": "source"
+    },
+    "T34": {
+      "triggers": [
+        "pre-mortem",
+        "red team",
+        "assume failure",
+        "how could this fail",
+        "attack your answer",
+        "worst case",
+        "failure modes",
+        "assume it fails",
+        "how would this break",
+        "attack my answer",
+        "find the flaw",
+        "adversarial check",
+        "stress test"
+      ],
+      "anti": [
+        "optimistic",
+        "success only",
+        "simple task",
+        "already verified",
+        "no risk",
+        "quick lookup"
+      ],
+      "basis": "judgment"
+    },
+    "T35": {
+      "triggers": [
+        "outline first",
+        "skeleton",
+        "draft outline",
+        "structure first",
+        "headings first",
+        "outline before",
+        "skeleton before writing",
+        "draft the structure",
+        "table of contents then",
+        "scaffold then fill",
+        "hierarchical plan"
+      ],
+      "anti": [
+        "direct generation",
+        "no outline",
+        "short output",
+        "one paragraph",
+        "no structure needed",
+        "stream of consciousness"
+      ],
+      "basis": "source"
+    },
+    "T36": {
+      "triggers": [
+        "meta prompt",
+        "generate a prompt",
+        "optimize a prompt",
+        "prompt for",
+        "write a prompt that",
+        "meta-level",
+        "prompt about prompts",
+        "generate a prompt for",
+        "optimize this prompt",
+        "prompt for prompts",
+        "create a system prompt",
+        "improve this instruction"
+      ],
+      "anti": [
+        "direct answer",
+        "just do the task",
+        "use this prompt directly",
+        "final prompt already given",
+        "no prompt needed"
+      ],
+      "basis": "source"
+    },
+    "T37": {
+      "triggers": [
+        "good example",
+        "bad example",
+        "near miss",
+        "contrast",
+        "compare good and bad",
+        "positive and negative example",
+        "what not to do",
+        "good example vs bad",
+        "contrast this with",
+        "compare correct and incorrect",
+        "before and after",
+        "bad then good"
+      ],
+      "anti": [
+        "single example",
+        "no comparison",
+        "only positive examples",
+        "single example fine"
+      ],
+      "basis": "source"
+    },
+    "T38": {
+      "triggers": [
+        "audience",
+        "reader",
+        "who will read",
+        "target audience",
+        "expertise level",
+        "background knowledge",
+        "for a beginner",
+        "for an expert",
+        "they need to",
+        "audience is",
+        "reader is",
+        "assume the user knows",
+        "written for",
+        "explain to a",
+        "background of reader",
+        "what they need to do next"
+      ],
+      "anti": [
+        "no audience specified",
+        "no reader specified",
+        "internal use only",
+        "model only output",
+        "parsed by code"
+      ],
+      "basis": "source"
+    },
+    "T39": {
+      "triggers": [
+        "acceptance criteria",
+        "definition of done",
+        "tests first",
+        "success criteria",
+        "before writing",
+        "how will we know",
+        "pass criteria",
+        "what does success look like",
+        "how will we know it worked",
+        "write the test before"
+      ],
+      "anti": [
+        "no criteria",
+        "informal",
+        "open ended creative",
+        "no measurable outcome",
+        "exploratory only"
+      ],
+      "basis": "source"
+    },
+    "T40": {
+      "triggers": [
+        "tool schema",
+        "function schema",
+        "tool description",
+        "parameter",
+        "error contract",
+        "api schema",
+        "tool definition",
+        "function calling",
+        "mcp tool",
+        "function signature",
+        "api contract",
+        "error handling spec",
+        "agent tools",
+        "describe the tool",
+        "parameters for function"
+      ],
+      "anti": [
+        "no tools",
+        "pure text output",
+        "no tools needed",
+        "pure text task",
+        "no agent",
+        "simple prompt"
+      ],
+      "basis": "source"
+    },
+    "T41": {
+      "triggers": [
+        "chain of verification",
+        "verify your answer",
+        "generate questions",
+        "check answers",
+        "verification questions",
+        "answer and verify",
+        "generate check questions",
+        "fact check yourself",
+        "cross verify",
+        "independent verification",
+        "challenge your own claim",
+        "answer then verify"
+      ],
+      "anti": [
+        "trust the answer",
+        "no verification",
+        "creative task",
+        "no verifiable facts",
+        "subjective output",
+        "speed over accuracy"
+      ],
+      "basis": "judgment"
+    },
+    "T42": {
+      "triggers": [
+        "multi-agent",
+        "orchestrate agents",
+        "agent orchestration",
+        "coordinator agent",
+        "swarm",
+        "delegate to",
+        "parallel agents",
+        "agent network",
+        "agent workflow",
+        "spawn agent"
+      ],
+      "anti": [
+        "single agent",
+        "no agents",
+        "simple script"
+      ],
+      "basis": "multi-agent orchestration vocabulary"
+    },
+    "T43": {
+      "triggers": [
+        "diverge then converge",
+        "brainstorm then select",
+        "generate options then choose",
+        "explore then narrow",
+        "ideate then evaluate",
+        "expand then contract",
+        "many ideas then one",
+        "wide then narrow"
+      ],
+      "anti": [
+        "single path",
+        "linear",
+        "direct answer"
+      ],
+      "basis": "diverge-then-converge vocabulary"
+    }
+  }
+}

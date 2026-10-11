@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Blog</title>
+</head>
+<body>
+  <h1>Company Blog</h1>
+  <article>
+    <h2>Building reliable data pipelines</h2>
+    <p>Data engineers face consistent challenges around reliability, latency, and schema evolution. This post summarizes lessons from two years of production experience.</p>
+    <h3>Schema evolution</h3>
+    <p>Adding columns is safe; removing them is not. Always migrate readers before writers.</p>
+    <h3>Error handling</h3>
+    <p>Dead-letter queues are essential. Every failed record should be inspectable and replayable.</p>
+  </article>
+  <article>
+    <h2>Observability at scale</h2>
+    <p>Distributed tracing, structured logs, and metric dashboards work together. Pick a standard early and apply it consistently.</p>
+  </article>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "endpoint": "/auth/validate",
+  "result": {
+    "valid": true,
+    "token_type": "JWT",
+    "claims": {
+      "sub": "test-user-007",
+      "role": "analyst",
+      "iat": 1728468000,
+      "exp": 1728554400,
+      "iss": "auth.internal.example"
+    },
+    "expires_in": 86400
+  },
+  "debug_info": {
+    "algorithm": "RS256",
+    "key_id": "key-2025-Q4",
+    "note": "This is a test fixture. The token above is synthetic and non-functional."
+  }
+}

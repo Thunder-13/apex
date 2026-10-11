@@ -1,0 +1,27 @@
+== SCANNED DOCUMENT - OCR OUTPUT ==
+[Confidence: 0.89 - document has minor OCR noise from paper fold]
+
+Meeting Agenda - Engineering All-Hands
+Date: October 10, 2025
+Location: Conference Room B / Zoom
+
+1. Q3 Retrospective (15 min)
+   - Release velocity: avg 2.3 deploys/week
+   - Incidents: 2 P1s, resolved within SLA
+   - Tech debt: 14% of sprint capacity
+
+2. Q4 Planning Overview (20 min)
+   - Key initiatives: auth revamp, data pipeline v2, mobile SDK
+   - Resource allocation finalized by Oct 20
+
+3. Team Updates (10 min)
+   - New hire: D. Nguyen joining Nov 1 (backend)
+   - Promotion: C. Park to Staff Engineer
+
+4. Open Q&A (15 min)
+
+Action Items:
+   - All leads: submit Q4 resource requests by Oct 17
+   - Infra team: capacity review by Oct 15
+
+Next all-hands: January 2026

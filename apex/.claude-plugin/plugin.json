@@ -1,0 +1,16 @@
+{
+  "name": "apex",
+  "version": "3.0.0",
+  "description": "APEX (Ask. Perfect. EXecute.) v3: prompt optimization gate (System One router + System Two loop) plus the APEX Firewall covering 9 attack types, 11 input sources, and Haiku/Sonnet/Opus escalation. Advisory; never blocks; always exits 0.",
+  "author": {
+    "name": "Thunder-13",
+    "email": "saravananofficial13@gmail.com"
+  },
+  "keywords": [
+    "prompt-engineering",
+    "prompt-injection",
+    "firewall",
+    "apex",
+    "apex-firewall"
+  ]
+}

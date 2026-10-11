@@ -1,0 +1,10 @@
+{
+  "name": "apex-thunder",
+  "version": "0.2.0",
+  "author": {
+    "name": "Thunder-13",
+    "email": "saravananofficial13@gmail.com"
+  },
+  "description": "Shows the ⚡ APEX status indicator when APEX (Ask. Perfect. EXecute.) is on. Reads ~/.claude/apex/state.json on session start and each prompt submit. No Pane, no Button.",
+  "types": "./types/index.d.ts"
+}

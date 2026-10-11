@@ -1,0 +1,26 @@
+== SCANNED DOCUMENT - OCR OUTPUT ==
+[Confidence: 0.94]
+
+PURCHASE ORDER #PO-2025-0441
+
+Vendor: Office Supplies Co.
+Ship To: 123 Main Street, Suite 400
+         Anytown, CA 90210
+
+Date: October 7, 2025
+PO Number: PO-2025-0441
+
+Line Items:
+  1. Ballpoint pens, black, box of 12       Qty: 5   Unit: $4.99   Total: $24.95
+  2. A4 printer paper, 500 sheets/ream      Qty: 10  Unit: $8.49   Total: $84.90
+  3. Staples, standard, box of 5000        Qty: 3   Unit: $3.29   Total: $9.87
+  4. File folders, letter size, box of 50  Qty: 2   Unit: $6.99   Total: $13.98
+
+Subtotal: $133.70
+Shipping: $12.00
+Tax (8.5%): $11.36
+Total Due: $157.06
+
+Authorized by: M. Johnson
+Department: Operations
+Cost Center: OPS-441

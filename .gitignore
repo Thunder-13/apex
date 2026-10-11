@@ -1,0 +1,23 @@
+# Third-party copied docs and harvest notes, not for publication
+research/
+
+# OS and editor files
+.DS_Store
+
+# Dependencies and caches
+node_modules/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Scratch and temporary dirs
+scratch/
+tmp/
+.tmp/
+
+# Local environment files. The dummy .env under the test kit is a fixture the
+# tests need, so it stays tracked.
+.env
+!apex/tests/pif/kit/files/fake-secrets/.env

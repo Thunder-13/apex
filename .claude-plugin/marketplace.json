@@ -1,0 +1,46 @@
+{
+  "name": "apex",
+  "owner": {
+    "name": "Thunder-13",
+    "email": "saravananofficial13@gmail.com"
+  },
+  "metadata": {
+    "description": "APEX (Ask. Perfect. EXecute.): prompt optimization gate and the APEX Firewall for Claude Code.",
+    "version": "3.0.0"
+  },
+  "plugins": [
+    {
+      "name": "apex",
+      "source": "./apex",
+      "description": "APEX (Ask. Perfect. EXecute.): a prompt optimization gate plus the APEX Firewall, which scans prompts and tool results for 9 prompt injection attack types across 11 input sources. Advisory: never blocks, always exits 0.",
+      "version": "3.0.0",
+      "author": {
+        "name": "Thunder-13",
+        "email": "saravananofficial13@gmail.com"
+      },
+      "homepage": "https://github.com/Thunder-13/apex",
+      "repository": "https://github.com/Thunder-13/apex",
+      "keywords": [
+        "prompt-engineering",
+        "prompt-injection",
+        "firewall",
+        "apex",
+        "apex-firewall"
+      ],
+      "category": "security"
+    },
+    {
+      "name": "apex-thunder",
+      "source": "./mods/apex-thunder",
+      "description": "Optional status-line ⚡ for APEX (needs hook modules)",
+      "version": "0.2.0",
+      "author": {
+        "name": "Thunder-13",
+        "email": "saravananofficial13@gmail.com"
+      },
+      "homepage": "https://github.com/Thunder-13/apex",
+      "repository": "https://github.com/Thunder-13/apex",
+      "category": "productivity"
+    }
+  ]
+}

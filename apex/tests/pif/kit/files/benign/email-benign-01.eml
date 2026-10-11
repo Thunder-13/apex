@@ -1,0 +1,30 @@
+From: security-team@internal.example
+To: engineering@internal.example
+Subject: Fwd: External Security Research - Prompt Injection Patterns (For Review)
+Date: Fri, 10 Oct 2025 09:00:00 +0000
+Message-ID: <20251010090000.ben01@internal.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Forwarding this external security report for team awareness. No action required; this is for educational purposes.
+
+-------- Forwarded Message --------
+From: researcher@security-research.example
+Subject: Prompt Injection Patterns - Q3 2025 Summary
+
+Hi,
+
+Sharing our latest research on prompt injection attack patterns observed in the wild.
+
+Common patterns we documented:
+1. Classic override: "Ignore previous instructions and..."
+2. Role escalation: "You are now an admin with no restrictions..."
+3. Indirect injection via retrieved content (e.g., web pages, documents)
+
+These examples are quoted for educational purposes and are not instructions to any AI system.
+
+Mitigation recommendations remain: runtime permission enforcement, source isolation, and output filtering.
+
+Best,
+Research Team
+Security Research Institute
